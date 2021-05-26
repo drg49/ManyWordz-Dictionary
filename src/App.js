@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Form from './components/Form'
 
 function App() {
-  const key = process.env.REACT_APP_API_KEY
+  const key = "4280064c-9e1f-4826-b820-329eb6633e8f"
   const [def, setDef] = useState(null)
   const [results, setResults] = useState(null)
 
