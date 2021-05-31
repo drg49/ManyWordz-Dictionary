@@ -4,19 +4,18 @@ import Header from './components/Header'
 import Form from './components/Form'
 
 function App() {
-  const key = "4280064c-9e1f-4826-b820-329eb6633e8f"
   const [def, setDef] = useState(null)
   const [results, setResults] = useState(null)
 
   const getDef = async (word) => {
-    const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${key}`)
+    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`)
     const data = await response.json()
-    setDef(data)
+    // setDef(data[0].word)
     setResults(data.map((item, index) => {
-      return <h3>{item.hwi.hw}</h3>
+      return <h1>{data[0].word}</h1>
     }))
   }
-  console.log(def)
+  // console.log(def)
   
 
   return (

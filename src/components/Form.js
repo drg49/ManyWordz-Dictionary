@@ -4,7 +4,8 @@ const Form = (props) => {
 
     const handleChange = (event) => {
         let word = event.target.value
-        if (word.length >= 3) {
+        console.log(word)
+        if (word.length >= 2) {
         props.getDef(word)
         } else {
             props.setResults(null)
