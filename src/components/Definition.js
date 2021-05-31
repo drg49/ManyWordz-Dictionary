@@ -26,8 +26,8 @@ const Definition = (props) => {
     }
     
 
-    return props.def ? loaded() : loading()
     
+    return props.def ? loaded() : loading()
 }
 
 export default Definition

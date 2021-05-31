@@ -7,7 +7,7 @@ const Form = (props) => {
     const handleSubmit = () => {
         console.log(inputRef.current.value)
         props.getDef(inputRef.current.value)
-        
+        inputRef.current.value = ""
     }
 
 

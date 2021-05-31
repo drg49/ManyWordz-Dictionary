@@ -17,7 +17,7 @@ function App() {
     setDef(data)
     history.push("/def")
   }
-  console.log(def)
+  
 
   return (
     <div className="App">
