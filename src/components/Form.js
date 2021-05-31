@@ -1,22 +1,21 @@
-import { useState } from "react"
+import { useRef } from "react"
 
 const Form = (props) => {
 
-    const handleChange = (event) => {
-        let word = event.target.value
-        console.log(word)
-        if (word.length >= 2) {
-        props.getDef(word)
-        } else {
-            props.setResults(null)
-        }
+    const inputRef = useRef()
+
+    const handleSubmit = () => {
+        console.log(inputRef.current.value)
+        props.getDef(inputRef.current.value)
+        
     }
 
 
 
     return (
         <div>
-            <input type="text" onChange={handleChange}/>
+            <input type="text" ref={inputRef}/>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
     )
 }
